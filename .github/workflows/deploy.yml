@@ -23,8 +23,8 @@ jobs:
       
       - name: Build project
         run: |
-          npm run build,
-          echo 'lassemoldrup.dk' > CNAME.
+          npm run build
+          echo 'lassemoldrup.dk' > CNAME
       
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
