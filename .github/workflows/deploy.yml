@@ -24,7 +24,6 @@ jobs:
       - name: Build project
         run: |
           npm run build
-          echo 'lassemoldrup.dk' > CNAME
       
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
@@ -33,5 +32,4 @@ jobs:
           branch: master
           folder: public
           token: ${{ secrets.PAT }}
-          single-comit: true
-          dry-run: true
+          single-commit: true
