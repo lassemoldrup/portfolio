@@ -1,6 +1,6 @@
 <script lang="ts">
-    import GithubIcon from './icons/github.svg';
-    import HomeIcon from './icons/home.svg';
+    import GithubIcon from '../icons/github.svg';
+    import HomeIcon from '../icons/home.svg';
 </script>
 
 
@@ -9,12 +9,23 @@
 
     header {
         width: 100%;
-        height: $header-height;
+        height: $header-height + 1px;
         background-color: #333;
+        border-bottom: 1px solid #555;
+
+        :global(.icon) {
+            fill: var(--lighter);
+            width: auto;
+            height: 100%;
+        }
     }
 
     nav {
         display: inline-block;
+
+        li {
+            border-right: 1px solid #555;
+        }
     }
 
     ul {
@@ -31,34 +42,31 @@
 
     #links {
         float: right;
+
+        .icon-link {
+            border-left: 1px solid #555;
+        }
     }
 
     .icon-link, .text-link {
         height: $header-height;
         text-align: center;
-        padding: 6px;
-        border: 2px solid #333;
+        padding: 10px;
 
         &:hover, &:focus {
-            border: 2px solid var(--light);
+            background-color: #222;
             cursor: pointer;
         }
     }
 
     .icon-link {
-        width: $header-height;
+        width: $header-height + 1px;
 
         &:hover, &:focus {
-            :global svg {
+            :global(.icon) {
                 fill: var(--light);
             }
         }
-    }
-
-    :global svg {
-        fill: var(--lighter);
-        width: auto;
-        height: 100%;
     }
 
     .text-link {
@@ -76,16 +84,16 @@
     <nav>
         <ul>
             <li class="icon-link">
-                <a href="#"><HomeIcon/></a>
+                <a href="/"><HomeIcon class="icon"/></a>
             </li>
             <li class="text-link">
-                <a href="#">ABOUT</a>
+                <a href="#about">ABOUT</a>
             </li>
         </ul>
     </nav>
     <ul id="links">
         <li class="icon-link">
-            <a href="https://github.com/lassemoldrup"><GithubIcon/></a>
+            <a href="https://github.com/lassemoldrup"><GithubIcon class="icon"/></a>
         </li>
     </ul>
 </header>

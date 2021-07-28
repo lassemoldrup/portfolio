@@ -1,4 +1,5 @@
 <script lang="ts">
+    import Header from './components/Header.svelte';
     import Home from './Home.svelte';
     import '../node_modules/normalize.css/normalize.css';
 </script>
@@ -10,7 +11,7 @@
         --light: #BBB;
     }
 
-    * {
+    *, *::before, *::after {
         box-sizing: border-box;
     }
 
@@ -23,6 +24,12 @@
         background: #222;
     }
 
+    h1, h2, h3 {
+        text-transform: uppercase;
+        font-weight: normal;
+        letter-spacing: 2px;
+    }
+
     a {
         text-decoration: none;
         color: lightblue;
@@ -31,7 +38,12 @@
             text-decoration: underline;
         }
     }
+
+    p {
+        line-height: 1.5em;
+    }
 </style>
 
 
+<Header/>
 <Home/>
