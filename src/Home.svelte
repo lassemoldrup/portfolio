@@ -3,8 +3,7 @@
     import Tile from './components/Tile.svelte';
     import ChessIcon from './icons/chess.svg';
     import LambdaIcon from './icons/lambda.svg';
-
-
+    import SatIcon from './icons/sat.svg';
 </script>
 
 
@@ -47,7 +46,7 @@
         color="hsl(55, 15%, 30%)"
         hoverColor="hsl(55, 15%, 15%)"
         techs="{['Rust', 'WebAssembly']}">
-        <LambdaIcon class="icon"/>
+        <SatIcon class="icon"/>
     </Tile>
 </div>
 <About/>

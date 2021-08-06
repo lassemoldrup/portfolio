@@ -37,6 +37,10 @@
             transform: scale(0.5);
         }
 
+        :global(.icon .stroke) {
+            stroke: var(--lighter);
+        }
+
         &:hover, &:focus {
             background-color: var(--hover-color);
             cursor: pointer;
